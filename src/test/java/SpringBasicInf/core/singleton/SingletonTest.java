@@ -1,6 +1,7 @@
 package SpringBasicInf.core.singleton;
 
 import SpringBasicInf.core.AppConfig;
+import SpringBasicInf.core.member.MemberRepository;
 import SpringBasicInf.core.member.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -45,6 +46,12 @@ public class SingletonTest {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
         // 1.조회: 호출할 때마다 객체 생성
         MemberService memberService1 = ac.getBean("memberService", MemberService.class);
+
+//        MemberRepository memberRepository1 = ac.getBean("memberRepository", MemberRepository.class);
+//        MemberRepository memberRepository2 = ac.getBean("memberRepository", MemberRepository.class);
+//        Assertions.assertThat(memberRepository1).isSameAs(memberRepository2);
+//        System.out.println("memberRepository1 = " + memberRepository1);
+//        System.out.println("memberRepository2 = " + memberRepository2);
 
         // 2.조회: 호출할 때마다 객체 생성
         MemberService memberService2 = ac.getBean("memberService", MemberService.class);
