@@ -20,17 +20,17 @@ public class AutowiredTest {
 
         @Autowired(required = false)
         public void setNoBean1(Member noBean1) {
-            System.out.println("noBean1 = " + noBean1);
+            System.out.println("setNoBean1 = " + noBean1);
         }
 
         @Autowired
         public void setNoBean2(@Nullable Member noBean2) {
-            System.out.println("noBean2 = " + noBean2);
+            System.out.println("setNoBean2 = " + noBean2);
         }
 
         @Autowired
         public void setNoBean3(Optional<Member> NoBean3) {
-            System.out.println("NoBean3 = " + NoBean3);
+            System.out.println("setNoBean3 = " + NoBean3);
         }
     }
 }
