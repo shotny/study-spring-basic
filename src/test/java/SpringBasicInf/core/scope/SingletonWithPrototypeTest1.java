@@ -47,7 +47,9 @@ public class SingletonWithPrototypeTest1 {
 //        @Autowired
 //        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
         // Dependency Lookup - 의존관계 조회(탐색)
+        // ObjectProvider -> 지정한 빈을 컨테이너에서 대신 찾아주는 DL 서비스 제공. 스프링에 의존. getObject() 사용
 
+        // provider
         @Autowired
         private Provider<PrototypeBean> prototypeBeanProvider;
 
